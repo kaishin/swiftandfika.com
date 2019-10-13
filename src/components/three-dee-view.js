@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
+import GLTFLoader from 'three-gltf-loader';
 
 export default class ThreeDeeView extends Component {
   constructor(props) {
     super(props);
-  }
 
+    this.scene = new THREE.Scene();
+  }
   componentDidMount = () => {
     this.setupCamera();
     this.setupRenderer();
     this.setupScene();
+    this.setupLights();
     this.animate();
   };
 
@@ -37,16 +40,47 @@ export default class ThreeDeeView extends Component {
   };
 
   setupScene = () => {
-    this.scene = new THREE.Scene();
-
     var geometry = new THREE.BoxGeometry(1, 1, 1);
     var material = new THREE.MeshBasicMaterial({ color: 0x039b4f });
-    var cube = new THREE.Mesh(geometry, material);
+    this.cube = new THREE.Mesh(geometry, material);
 
-    this.scene.add(cube);
+    this.scene.background = new THREE.Color(0xc4d0cc);
+
+    this.loader = new GLTFLoader();
+
+    this.loader.load(
+      'coffee/scene.gltf',
+      (gltf) => {
+        this.cup = gltf.scene;
+        this.scene.add(this.cup);
+      },
+      undefined,
+      function(error) {
+        console.error(error);
+      }
+    );
+
+    // this.scene.add(this.cube);
+  };
+
+  setupLights = () => {
+    let aLight = new THREE.AmbientLight(0xebebeb);
+    let dLight = new THREE.DirectionalLight(0x6695f7, 1, 100);
+    dLight.position.set(0, 0, 100);
+
+    this.scene.add(aLight);
+    this.scene.add(dLight);
   };
 
   animate = () => {
+    this.cube.rotation.x += 0.01;
+    this.cube.rotation.y += 0.01;
+
+    if (this.cup) {
+      this.cup.rotation.x = 1;
+      this.cup.rotation.y += 0.01;
+    }
+
     requestAnimationFrame(this.animate);
     this.renderer.render(this.scene, this.camera);
   };
