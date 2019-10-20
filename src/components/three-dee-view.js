@@ -18,7 +18,7 @@ export default class ThreeDeeView extends Component {
 
   setupCamera = () => {
     let { innerWidth: width, innerHeight: height } = window;
-    this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    this.camera = new THREE.PerspectiveCamera(105, width / height, 0.1, 1000);
     this.camera.position.z = 5;
   };
 
@@ -44,7 +44,7 @@ export default class ThreeDeeView extends Component {
     var material = new THREE.MeshBasicMaterial({ color: 0x039b4f });
     this.cube = new THREE.Mesh(geometry, material);
 
-    this.scene.background = new THREE.Color(0xc4d0cc);
+    this.scene.background = new THREE.Color(0x9a3e00);
 
     this.loader = new GLTFLoader();
 
@@ -78,7 +78,7 @@ export default class ThreeDeeView extends Component {
 
     if (this.cup) {
       this.cup.rotation.x = 1;
-      this.cup.rotation.y += 0.01;
+      this.cup.rotation.y += 0.005;
     }
 
     requestAnimationFrame(this.animate);
