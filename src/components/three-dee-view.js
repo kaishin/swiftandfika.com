@@ -31,7 +31,7 @@ export default class ThreeDeeView extends Component {
       canvas: document.querySelector('#gl-view'),
       clearAlpha: 0.25,
       preserveDrawingBuffer: false,
-      failIfMajorPerformanceCaveat: true
+      failIfMajorPerformanceCaveat: true,
     });
 
     this.renderer.setClearColor(0xebebeb);
@@ -51,13 +51,20 @@ export default class ThreeDeeView extends Component {
     this.loader.load(
       'coffee/scene.gltf',
       (gltf) => {
+        const material = new THREE.MeshBasicMaterial({ color: 0xaa88ff, wireframe: true });
+        gltf.scene.traverse(function(child) {
+          if (child.isMesh) {
+            child.material = material;
+          }
+        });
+
         this.cup = gltf.scene;
         this.scene.add(this.cup);
       },
       undefined,
       function(error) {
         console.error(error);
-      }
+      },
     );
 
     // this.scene.add(this.cube);
