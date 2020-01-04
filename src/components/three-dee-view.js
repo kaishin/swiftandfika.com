@@ -39,7 +39,7 @@ export default class ThreeDeeView extends Component {
     });
 
     this.renderer.setPixelRatio(Math.min(1.25, window.devicePixelRatio));
-    this.renderer.setSize(availableWidth, customHeight);
+    this.renderer.setSize(width, height);
   };
 
   setupScene = () => {
