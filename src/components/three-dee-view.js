@@ -15,6 +15,7 @@ export default class ThreeDeeView extends Component {
     this.setupRenderer();
     this.setupScene();
     this.setupControls();
+    this.setupLights();
     this.animate();
   };
 
@@ -22,18 +23,22 @@ export default class ThreeDeeView extends Component {
     let fov = 75;
     let aspect = 2;
     let near = 0.2;
-    let far = 1000;
+    let far = 100;
     this.camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
     this.camera.position.z = 3.5;
-    this.camera.lookAt(new THREE.Vector3(0, 0, 0));
+  };
+
+  setupLights = () => {
+    this.light1 = new THREE.PointLight(0x43009b, 2, 40);
+    this.scene.add(this.light1);
+    this.light2 = new THREE.PointLight(0x0040ff, 2, 40);
+    this.scene.add(this.light2);
   };
 
   setupRenderer = () => {
     this.renderer = new THREE.WebGLRenderer({
-      // alpha: true,
       antialias: false,
       canvas: document.querySelector('#gl-view'),
-      clearAlpha: 0.25,
       preserveDrawingBuffer: false,
       failIfMajorPerformanceCaveat: true,
     });
@@ -43,15 +48,8 @@ export default class ThreeDeeView extends Component {
     this.loader = new GLTFLoader();
 
     this.loader.load(
-      'coffee/scene.gltf',
+      'mug-1.glb',
       (gltf) => {
-        const material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
-        gltf.scene.traverse(function(child) {
-          if (child.isMesh) {
-            child.material = material;
-          }
-        });
-
         this.cup = gltf.scene;
         this.scene.add(this.cup);
       },
@@ -62,10 +60,23 @@ export default class ThreeDeeView extends Component {
     );
   };
 
+  applyMaterial = (scene) => {
+    const material = new THREE.MeshBasicMaterial({
+      color: 0xffffff,
+      wireframe: true,
+    });
+
+    scene.traverse(function(child) {
+      if (child.isMesh) {
+        child.material = material;
+      }
+    });
+  };
+
   setupControls = () => {
     this.controls = new OrbitControls(this.camera);
     this.controls.enableDamping = true;
-    this.controls.enablePan = false;
+    this.controls.enablePan = true;
     this.controls.enableZoom = false;
     this.controls.minPolarAngle = Math.PI / 2.5;
     this.controls.maxPolarAngle = Math.PI / 2.5;
@@ -73,9 +84,9 @@ export default class ThreeDeeView extends Component {
 
   resizeRendererToDisplaySize = () => {
     const canvas = this.renderer.domElement;
-    const pixelRatio = window.devicePixelRatio
-    const width = canvas.clientWidth * pixelRatio | 0;
-    const height = canvas.clientHeight * pixelRatio | 0;
+    const pixelRatio = window.devicePixelRatio;
+    const width = (canvas.clientWidth * pixelRatio) | 0;
+    const height = (canvas.clientHeight * pixelRatio) | 0;
     const isResizeNeeded = canvas.width !== width || canvas.height !== height;
 
     if (isResizeNeeded) {
@@ -89,9 +100,17 @@ export default class ThreeDeeView extends Component {
     this.controls.update();
 
     if (this.cup) {
-      this.cup.rotation.x = 0.2;
+      this.cup.rotation.x = 0.1;
       this.cup.rotation.y += 0.005;
     }
+
+    var time = Date.now() * 0.0005;
+    this.light1.position.x = Math.sin(time * 0.7) * 30;
+    this.light1.position.y = Math.cos(time * 0.5) * 40;
+    this.light1.position.z = Math.cos(time * 0.3) * 30;
+    this.light2.position.x = Math.cos(time * 0.3) * 30;
+    this.light2.position.y = Math.sin(time * 0.5) * 40;
+    this.light2.position.z = Math.sin(time * 0.7) * 30;
 
     if (this.resizeRendererToDisplaySize()) {
       const canvas = this.renderer.domElement;
