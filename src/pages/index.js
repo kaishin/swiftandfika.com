@@ -15,6 +15,7 @@ class IndexPage extends React.Component {
       <Layout>
         <SEO title="Home" />
         <ThreeDeeView />
+        <img src="/dark-logo.svg" alt="logo" width="300" />
         <form
           action="https://buttondown.email/api/emails/embed-subscribe/swiftandfika"
           method="post"
