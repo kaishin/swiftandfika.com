@@ -1,30 +1,36 @@
 {
   "name": "swift-and-fika",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Swift & Fika 2020",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Reda Lemeden <hello@redalemeden.com>",
   "dependencies": {
-    "gatsby": "^2.15.36",
-    "gatsby-image": "^2.2.27",
-    "gatsby-plugin-manifest": "^2.2.21",
-    "gatsby-plugin-react-helmet": "^3.1.11",
-    "gatsby-plugin-sharp": "^2.2.29",
-    "gatsby-source-filesystem": "^2.1.31",
-    "gatsby-transformer-sharp": "^2.2.21",
+    "gatsby": "^2.18.18",
+    "gatsby-image": "^2.2.37",
+    "gatsby-plugin-manifest": "^2.2.34",
+    "gatsby-plugin-postcss": "^2.1.18",
+    "gatsby-plugin-react-helmet": "^3.1.18",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sharp": "^2.3.10",
+    "gatsby-plugin-sitemap": "^2.2.24",
+    "gatsby-source-filesystem": "^2.1.43",
+    "gatsby-transformer-sharp": "^2.3.9",
     "prop-types": "^15.7.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "three": "^0.109.0",
-    "three-gltf-loader": "^1.109.0",
+    "three-gltf-loader": "^1.111.0",
     "three-orbit-controls": "^82.1.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.19.1"
   },
   "keywords": [
-    "gatsby"
+    "swift",
+    "fika",
+    "swift & fika",
+    "stockholm"
   ],
   "license": "MIT",
   "scripts": {
@@ -32,8 +38,7 @@
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
+    "serve": "gatsby serve"
   },
   "repository": {
     "type": "git",
