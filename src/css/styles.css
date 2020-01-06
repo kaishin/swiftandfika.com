@@ -1,0 +1,31 @@
+@import "helpers/_glob";
+@import "components/_glob";
+
+body {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-family: var(--text-font);
+  font-size: 16px;
+  margin: 0;
+}
+
+.page-heading {
+  @extend %heading;
+  font-weight: 600;
+}
+
+.main-container {
+  padding: 0 2rem;
+  @media (--full-grid-container) {
+    padding: 0 var(--main-container-padding);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+}

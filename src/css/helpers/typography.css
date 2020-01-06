@@ -1,0 +1,50 @@
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+:root {
+  --font-fira: 'Fira Mono';
+  --font-rubik: 'Rubik';
+  --header-title-size: 1.1rem;
+  --blog-body-size: 1.125rem;
+
+  --text-font: var(--font-rubik), system-ui;
+  --monospaced-font: var(--font-fira), monospace;
+}
+
+%body-text {
+  font-size: 1rem;
+  color: var(--theme-foreground-color);
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+
+%heading {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+
+  &::after {
+    background-color: var(--secondary-color);
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 1em;
+    width: 3em;
+  }
+}
+
+%inline-link-style {
+  text-decoration: none;
+  border-bottom: 1px solid var(--theme-link-border-bottom-color);
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: var(--theme-link-hover-background-color);
+    border-bottom: 1px solid var(--theme-link-color);
+  }
+
+  &:visited {
+    color: var(--theme-visited-link-color);
+  }
+}
