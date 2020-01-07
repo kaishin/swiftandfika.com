@@ -5,6 +5,8 @@ import PropTypes from "prop-types"
 import "../../css/normalize.css"
 import "../../css/styles.css"
 
+import 'typeface-exo'
+
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {

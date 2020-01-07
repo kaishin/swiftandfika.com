@@ -40,20 +40,14 @@ canvas {
 
 .main-logo {
   min-width: 220px;
-  max-width: 400px;
+  max-width: 320px;
   width: 40vw;
   transform: rotateX(5deg) rotateY(5deg);
   margin-bottom: 5vh;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-}
 .date-subheading {
-  font-size: 2vh;
+  font-size: 1.5rem;
   font-weight: 200;
   margin: 0;
   padding: 0;

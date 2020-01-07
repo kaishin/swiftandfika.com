@@ -30,6 +30,7 @@ dependencies:
   three: 0.112.1
   three-gltf-loader: 1.111.0_three@0.112.1
   three-orbit-controls: 82.1.0
+  typeface-exo: 0.0.61
 devDependencies:
   prettier: 1.19.1
 lockfileVersion: 5.1
@@ -12560,6 +12561,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+  /typeface-exo/0.0.61:
+    dev: false
+    resolution:
+      integrity: sha512-AH3bMVYnVpg2G+CJbgtogTuJpWGS0zspHJzzVR8cCgTtkbUI0pj8WBB+RFo14CHbF5MmZgYe7TVoWz+j4Yo6Jg==
   /ua-parser-js/0.7.21:
     dev: false
     resolution:
@@ -13402,3 +13407,4 @@ specifiers:
   three: ^0.112.1
   three-gltf-loader: ^1.111.0
   three-orbit-controls: ^82.1.0
+  typeface-exo: 0.0.61

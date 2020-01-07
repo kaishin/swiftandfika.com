@@ -1,13 +1,12 @@
 @custom-selector :--heading h1, h2, h3, h4, h5, h6;
 
 :root {
-  --font-fira: 'Fira Mono';
-  --font-rubik: 'Rubik';
+  --font-exo: 'Exo';
   --header-title-size: 1.1rem;
   --blog-body-size: 1.125rem;
 
-  --text-font: var(--font-rubik), system-ui;
-  --monospaced-font: var(--font-fira), monospace;
+  --text-font: var(--font-exo), system-ui;
+  --monospaced-font: monospace;
 }
 
 %body-text {
