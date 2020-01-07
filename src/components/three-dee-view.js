@@ -25,7 +25,7 @@ export default class ThreeDeeView extends Component {
     let near = 0.2;
     let far = 100;
     this.camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this.camera.position.z = 3.5;
+    this.camera.position.z = 5;
   };
 
   setupLights = () => {
@@ -126,9 +126,3 @@ export default class ThreeDeeView extends Component {
     return <canvas id="gl-view" className="3d-shape" />;
   }
 }
-
-// function onWindowResize() {
-//   camera.aspect = window.innerWidth / window.innerHeight;
-//   camera.updateProjectionMatrix();
-//   renderer.setSize( window.innerWidth, window.innerHeight );
-// }

@@ -29,3 +29,38 @@ canvas {
   display: block;
   width: 100%;
 }
+
+.logo-container {
+  position: absolute;
+  top: calc(70vh - 200px);
+  height: 25vh;
+  width: 100%;
+  text-align: center;
+}
+
+.main-logo {
+  min-width: 220px;
+  max-width: 400px;
+  width: 40vw;
+  transform: rotateX(5deg) rotateY(5deg);
+  margin-bottom: 5vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.date-subheading {
+  font-size: 2vh;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.1em;
+}
+
+#gl-view {
+  height: 100vh;
+  margin-top: -200px;
+}
