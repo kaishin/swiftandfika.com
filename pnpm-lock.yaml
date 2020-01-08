@@ -15,7 +15,9 @@ dependencies:
   gatsby-react-router-scroll: 2.1.19_8b00c0cfe0232e8f714a6e242bd64fce
   gatsby-source-filesystem: 2.1.43_gatsby@2.18.18
   gatsby-transformer-sharp: 2.3.9_e5e5d7203e35f46b42f92d6ad16b87ee
+  minimatch: 3.0.4
   mitt: 1.2.0
+  pify: 4.0.1
   postcss-color-mod-function: 3.0.3
   postcss-extend: 1.0.5
   postcss-import: 12.0.1
@@ -29,7 +31,6 @@ dependencies:
   shallow-compare: 1.2.2
   three: 0.112.1
   three-gltf-loader: 1.111.0_three@0.112.1
-  three-orbit-controls: 82.1.0
   typeface-exo: 0.0.61
 devDependencies:
   prettier: 1.19.1
@@ -12315,10 +12316,6 @@ packages:
       three: '>=0.111.0'
     resolution:
       integrity: sha512-f2d6J5sMEC+dvRcpRjE8g9vqtvpNfnR7bgd+R7Y0dj2mmHwKN5luKe/WYA0Z9+j7mhjla/AC5DGxdXsu8wFhug==
-  /three-orbit-controls/82.1.0:
-    dev: false
-    resolution:
-      integrity: sha1-EafzPQog7OyY8Jizd4D2U3N0+rQ=
   /three/0.112.1:
     dev: false
     resolution:
@@ -13391,7 +13388,9 @@ specifiers:
   gatsby-react-router-scroll: ^2.1.19
   gatsby-source-filesystem: ^2.1.43
   gatsby-transformer-sharp: ^2.3.9
+  minimatch: ^3.0.4
   mitt: ^1.2.0
+  pify: ^4.0.1
   postcss-color-mod-function: ^3.0.3
   postcss-extend: ^1.0.5
   postcss-import: ^12.0.1
@@ -13406,5 +13405,4 @@ specifiers:
   shallow-compare: ^1.2.2
   three: ^0.112.1
   three-gltf-loader: ^1.111.0
-  three-orbit-controls: ^82.1.0
   typeface-exo: 0.0.61
