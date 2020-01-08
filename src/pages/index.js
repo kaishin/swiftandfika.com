@@ -26,9 +26,15 @@ class IndexPage extends React.Component {
             onSubmit={this.handleSubmit}
             className="embeddable-buttondown-form"
           >
-            <input type="email" name="email" id="bd-email" />
+            <input type="email" name="email" id="bd-email" placeholder="Your Email Address" />
             <input type="hidden" value="1" name="embed" />
-            <input type="submit" value="Subscribe" />
+            <input type="submit" value="Keep Me Posted!" />
+            <p className="small-print">
+              Powered by{' '}
+              <a href="https://buttondown.email" target="_blank">
+                ButtonDown
+              </a>
+            </p>
           </form>
         </div>
       </Layout>

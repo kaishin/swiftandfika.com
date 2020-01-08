@@ -8,7 +8,7 @@ input[type="button"] {
   border: none;
   cursor: pointer;
   border-radius: 12em;
-  color: var(--primary-color);
+  color: #fff;
   display: inline-block;
   font-size: 0.9rem;
   font-weight: 700;
