@@ -25,7 +25,7 @@
   }
 }
 
-/* input {
+input {
   @extend %field;
 }
 textarea {
@@ -50,4 +50,4 @@ fieldset {
   & .textarea {
     flex-basis: 100%;
   }
-} */
+}
