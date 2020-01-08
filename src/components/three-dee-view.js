@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import GLTFLoader from 'three-gltf-loader';
-
-var OrbitControls = require('three-orbit-controls')(THREE);
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export default class ThreeDeeView extends Component {
   constructor(props) {
@@ -18,6 +17,10 @@ export default class ThreeDeeView extends Component {
     this.setupLights();
     this.animate();
   };
+
+  componentWillUnmount() {
+    this.controls.dispose();
+  }
 
   setupCamera = () => {
     let fov = 75;
@@ -74,7 +77,7 @@ export default class ThreeDeeView extends Component {
   };
 
   setupControls = () => {
-    this.controls = new OrbitControls(this.camera);
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableDamping = true;
     this.controls.enablePan = true;
     this.controls.enableZoom = false;
