@@ -15,6 +15,7 @@ dependencies:
   gatsby-react-router-scroll: 2.1.19_8b00c0cfe0232e8f714a6e242bd64fce
   gatsby-source-filesystem: 2.1.43_gatsby@2.18.18
   gatsby-transformer-sharp: 2.3.9_e5e5d7203e35f46b42f92d6ad16b87ee
+  ismobilejs: 1.0.3
   minimatch: 3.0.4
   mitt: 1.2.0
   pify: 4.0.1
@@ -7488,6 +7489,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
+  /ismobilejs/1.0.3:
+    dev: false
+    resolution:
+      integrity: sha512-6rTcdWK7PHIWPYlCPdTbU9eE9yzdnIQSpiH+8Ln5OqugpEszQK5KHlsjZrDae26fEhki9rPvQmsjI1q4CLuKIA==
   /isobject/2.1.0:
     dependencies:
       isarray: 1.0.0
@@ -13388,6 +13393,7 @@ specifiers:
   gatsby-react-router-scroll: ^2.1.19
   gatsby-source-filesystem: ^2.1.43
   gatsby-transformer-sharp: ^2.3.9
+  ismobilejs: ^1.0.3
   minimatch: ^3.0.4
   mitt: ^1.2.0
   pify: ^4.0.1

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import isMobile from 'ismobilejs';
 import * as THREE from 'three';
 import GLTFLoader from 'three-gltf-loader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -13,13 +14,17 @@ export default class ThreeDeeView extends Component {
     this.setupCamera();
     this.setupRenderer();
     this.setupScene();
-    this.setupControls();
+    if (!isMobile.any) {
+      this.setupControls();
+    }
     this.setupLights();
     this.animate();
   };
 
   componentWillUnmount() {
-    this.controls.dispose();
+    if (!isMobile.any) {
+      this.controls.dispose();
+    }
   }
 
   setupCamera = () => {
@@ -80,11 +85,10 @@ export default class ThreeDeeView extends Component {
   setupControls = () => {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enableDamping = true;
-    this.controls.enablePan = true;
+    this.controls.enablePan = false;
     this.controls.enableZoom = false;
     this.controls.minPolarAngle = Math.PI / 2.5;
     this.controls.maxPolarAngle = Math.PI / 2.5;
-    this.controls.touches = { ONE: THREE.TOUCH.DOLLY_PAN, TWO: THREE.TOUCH.ROTATE };
   };
 
   resizeRendererToDisplaySize = () => {
@@ -102,7 +106,9 @@ export default class ThreeDeeView extends Component {
   };
 
   animate = () => {
-    this.controls.update();
+    if (!isMobile.any) {
+      this.controls.update();
+    }
 
     if (this.cup) {
       this.cup.rotation.x = 0.1;

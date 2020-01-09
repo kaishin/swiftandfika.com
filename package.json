@@ -21,6 +21,7 @@
     "gatsby-react-router-scroll": "^2.1.19",
     "gatsby-source-filesystem": "^2.1.43",
     "gatsby-transformer-sharp": "^2.3.9",
+    "ismobilejs": "^1.0.3",
     "minimatch": "^3.0.4",
     "mitt": "^1.2.0",
     "pify": "^4.0.1",
@@ -42,7 +43,12 @@
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "keywords": ["swift", "fika", "swift & fika", "stockholm"],
+  "keywords": [
+    "swift",
+    "fika",
+    "swift & fika",
+    "stockholm"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
