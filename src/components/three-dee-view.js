@@ -40,6 +40,7 @@ export default class ThreeDeeView extends Component {
 
   setupRenderer = () => {
     this.renderer = new THREE.WebGLRenderer({
+      alpha: true,
       antialias: true,
       canvas: document.querySelector('#gl-view'),
       preserveDrawingBuffer: false,
