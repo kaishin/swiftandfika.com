@@ -31,7 +31,7 @@ class IndexPage extends React.Component {
             <input type="submit" value="Keep Me Posted!" />
             <p className="small-print">
               Powered by{' '}
-              <a href="https://buttondown.email" target="_blank">
+              <a href="https://buttondown.email" target="_blank" rel="noopener noreferrer">
                 ButtonDown
               </a>
             </p>
