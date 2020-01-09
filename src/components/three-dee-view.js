@@ -84,6 +84,7 @@ export default class ThreeDeeView extends Component {
     this.controls.enableZoom = false;
     this.controls.minPolarAngle = Math.PI / 2.5;
     this.controls.maxPolarAngle = Math.PI / 2.5;
+    this.controls.touches = { ONE: THREE.TOUCH.DOLLY_PAN, TWO: THREE.TOUCH.ROTATE };
   };
 
   resizeRendererToDisplaySize = () => {
