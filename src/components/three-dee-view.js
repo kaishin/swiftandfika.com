@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import isMobile from 'ismobilejs';
 import * as THREE from 'three';
 import GLTFLoader from 'three-gltf-loader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -14,18 +13,9 @@ export default class ThreeDeeView extends Component {
     this.setupCamera();
     this.setupRenderer();
     this.setupScene();
-    if (!isMobile.any) {
-      this.setupControls();
-    }
     this.setupLights();
     this.animate();
   };
-
-  componentWillUnmount() {
-    if (!isMobile.any) {
-      this.controls.dispose();
-    }
-  }
 
   setupCamera = () => {
     let fov = 75;
@@ -106,10 +96,6 @@ export default class ThreeDeeView extends Component {
   };
 
   animate = () => {
-    if (!isMobile.any) {
-      this.controls.update();
-    }
-
     if (this.cup) {
       this.cup.rotation.x = 0.1;
       this.cup.rotation.y += 0.005;
