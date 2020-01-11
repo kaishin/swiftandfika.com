@@ -7,6 +7,7 @@ export default class ThreeDeeView extends Component {
   constructor(props) {
     super(props);
     this.scene = new THREE.Scene();
+    this.rotationUp = true;
   }
 
   componentDidMount = () => {
@@ -20,17 +21,20 @@ export default class ThreeDeeView extends Component {
   setupCamera = () => {
     let fov = 75;
     let aspect = 2;
-    let near = 0.2;
-    let far = 100;
+    let near = 0.1;
+    let far = 500;
     this.camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this.camera.position.z = 5;
+    this.camera.position.z = 5.5;
+    this.camera.lookAt(this.scene.position);
   };
 
   setupLights = () => {
-    this.light1 = new THREE.PointLight(0x43009b, 2, 40);
+    this.light1 = new THREE.PointLight(0x43009b, 2, 60);
     this.scene.add(this.light1);
-    this.light2 = new THREE.PointLight(0x0040ff, 2, 40);
+    this.light2 = new THREE.PointLight(0x0040ff, 2, 60);
     this.scene.add(this.light2);
+    this.light3 = new THREE.PointLight(0xdb493b, 2, 20);
+    this.scene.add(this.light3);
   };
 
   setupRenderer = () => {
@@ -50,6 +54,8 @@ export default class ThreeDeeView extends Component {
       'mug-1.glb',
       (gltf) => {
         this.cup = gltf.scene;
+        this.cup.rotation.z = 0.1;
+        this.cup.rotation.x = 0.5;
         this.scene.add(this.cup);
       },
       undefined,
@@ -97,17 +103,36 @@ export default class ThreeDeeView extends Component {
 
   animate = () => {
     if (this.cup) {
-      this.cup.rotation.x = 0.1;
+      if (this.rotationUp) {
+        if (this.cup.rotation.x < 0.4) {
+          this.cup.rotation.x += 0.001;
+        } else {
+          this.rotationUp = false;
+        }
+      } else {
+        if (this.cup.rotation.x > 0) {
+          this.cup.rotation.x -= 0.001;
+        } else {
+          this.rotationUp = true;
+        }
+      }
+
       this.cup.rotation.y += 0.005;
+      this.cup.rotation.z += 0.0001 * (this.rotationUp ? -1 : 1);
     }
 
     var time = Date.now() * 0.0005;
     this.light1.position.x = Math.sin(time * 0.7) * 30;
     this.light1.position.y = Math.cos(time * 0.5) * 40;
     this.light1.position.z = Math.cos(time * 0.3) * 30;
+
     this.light2.position.x = Math.cos(time * 0.3) * 30;
     this.light2.position.y = Math.sin(time * 0.5) * 40;
     this.light2.position.z = Math.sin(time * 0.7) * 30;
+
+    this.light3.position.x = Math.cos(time * 0.3) * -30;
+    this.light3.position.y = Math.sin(time * 0.5) * -10;
+    this.light3.position.z = Math.sin(time * 0.7) * -30;
 
     if (this.resizeRendererToDisplaySize()) {
       const canvas = this.renderer.domElement;

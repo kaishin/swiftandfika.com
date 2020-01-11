@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
         <ThreeDeeView />
         <div className="logo-container">
           <img src="/logo.svg" alt="logo" className="main-logo" />
-          <p className="date-subheading">See you this fall.</p>
+          <p className="date-subheading">See you this fall ☕️</p>
         </div>
         <div className="form-container">
           <form
@@ -26,7 +26,7 @@ class IndexPage extends React.Component {
             onSubmit={this.handleSubmit}
             className="embeddable-buttondown-form"
           >
-            <input type="email" name="email" id="bd-email" placeholder="Your Email Address" />
+            <input type="email" name="email" id="bd-email" placeholder="Email Address" />
             <input type="hidden" value="1" name="embed" />
             <input type="submit" value="Keep Me Posted!" />
             <p className="small-print">
