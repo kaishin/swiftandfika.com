@@ -1,5 +1,6 @@
 @import "helpers/_glob";
 @import "components/_glob";
+@import "page";
 
 body {
   background-color: black;
@@ -97,10 +98,11 @@ a {
 }
 
 .site-footer {
-  width: 100%;
-  text-align: center;
-  padding: 5rem 0 2rem;
   color: color-mod(var(--primary-color) tint(40%));
   font-size: 0.98rem;
+  line-height: 1.5;
   opacity: 0.6;
+  padding: 5rem 0 2rem;
+  text-align: center;
+  width: 100%;
 }

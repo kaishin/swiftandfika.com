@@ -10,6 +10,14 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-robots-txt',
     'gatsby-transformer-sharp',
+    'gatsby-transformer-remark',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'markdown-pages',
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
   ],
 };

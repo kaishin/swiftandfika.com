@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import "../../css/normalize.css"
 import "../../css/styles.css"
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}</main>
         <footer className="site-footer">
-          © {new Date().getFullYear()}, Swift & Fika. All Rights Reserved.
+          © {new Date().getFullYear()}, Swift &amp; Fika. <Link to="privacy">Privacy Policy</Link>
         </footer>
       </div>
     </>

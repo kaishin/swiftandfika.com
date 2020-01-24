@@ -1,0 +1,18 @@
+.content-page {
+  background-color: color-mod(var(--primary-color) b(20%));
+
+  & .wrapper {
+    max-width: var(--main-content-max-width);
+    margin: 4rem auto;
+  }
+
+  & hr {
+    opacity: 0.2;
+  }
+
+  & .page-body {
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
