@@ -69,10 +69,6 @@ a {
   width: 40vw;
   transform: rotateX(5deg) rotateY(5deg);
   margin-bottom: 5vh;
-  animation: blink 0.1s infinite alternate;
-  transform: translateZ(0) translate3D(0, 0, 0);
-  backface-visibility: hidden;
-  will-change: opacity;
 }
 
 @keyframes blink {
