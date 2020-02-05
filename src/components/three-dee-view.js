@@ -24,16 +24,16 @@ export default class ThreeDeeView extends Component {
     let near = 0.1;
     let far = 500;
     this.camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this.camera.position.z = 5.5;
+    this.camera.position.z = 4.5;
     this.camera.lookAt(this.scene.position);
   };
 
   setupLights = () => {
-    this.light1 = new THREE.PointLight(0x43009b, 2, 60);
+    this.light1 = new THREE.PointLight(0x43009b, 2, 80);
     this.scene.add(this.light1);
     this.light2 = new THREE.PointLight(0x0040ff, 2, 60);
     this.scene.add(this.light2);
-    this.light3 = new THREE.PointLight(0xdb493b, 2, 20);
+    this.light3 = new THREE.PointLight(0xdb493b, 2, 50);
     this.scene.add(this.light3);
   };
 
@@ -51,7 +51,7 @@ export default class ThreeDeeView extends Component {
     this.loader = new GLTFLoader();
 
     this.loader.load(
-      'mug-1.glb',
+      'mug-3.glb',
       (gltf) => {
         this.cup = gltf.scene;
         this.cup.rotation.z = 0.1;
@@ -121,7 +121,7 @@ export default class ThreeDeeView extends Component {
       this.cup.rotation.z += 0.0001 * (this.rotationUp ? -1 : 1);
     }
 
-    var time = Date.now() * 0.0005;
+    var time = Date.now() * 0.001;
     this.light1.position.x = Math.sin(time * 0.7) * 30;
     this.light1.position.y = Math.cos(time * 0.5) * 40;
     this.light1.position.z = Math.cos(time * 0.3) * 30;

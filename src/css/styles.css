@@ -33,7 +33,7 @@ a {
 .logo-container {
   width: 100%;
   text-align: center;
-  margin-top: -30vh;
+  margin-top: -28vh;
   margin-bottom: 10vh;
 }
 
@@ -65,7 +65,7 @@ a {
 
 .main-logo {
   min-width: 220px;
-  max-width: 320px;
+  max-width: 280px;
   width: 40vw;
   transform: rotateX(5deg) rotateY(5deg);
   margin-bottom: 5vh;
@@ -89,7 +89,7 @@ a {
   display: block;
   width: 100%;
   height: 100vh;
-  margin-top: -10vh;
+  margin-top: -20vh;
   outline: none;
 }
 

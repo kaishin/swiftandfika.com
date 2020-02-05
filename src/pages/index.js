@@ -16,7 +16,7 @@ class IndexPage extends React.Component {
         <ThreeDeeView />
         <div className="logo-container">
           <img src="/logo.svg" alt="logo" className="main-logo" />
-          <p className="date-subheading">See you this fall ☕️</p>
+          <p className="date-subheading">See you this fall. ☕️</p>
         </div>
         <div className="form-container">
           <form
