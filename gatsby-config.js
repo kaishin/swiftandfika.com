@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Swift & Fika',
-    description: 'Fall 2020',
+    description: 'The premier Swift conference in the nordics is back in 2020. See you in Stockholm this fall!',
     siteUrl: 'https://swiftandfika.com',
   },
   plugins: [

@@ -11,6 +11,7 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
+            siteUrl
           }
         }
       }
@@ -18,14 +19,14 @@ function SEO({ description, lang, meta, title }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const finalTitle = title === undefined ? site.siteMetadata.title : title + ' | ' + site.siteMetadata.title;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={finalTitle}
       meta={[
         {
           name: `description`,
@@ -44,6 +45,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          name: `og:image`,
+          content: `${site.siteMetadata.siteUrl}/previews/social-card-teaser.png`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -58,6 +63,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: `${site.siteMetadata.siteUrl}/previews/social-card-teaser.png`,
         },
       ].concat(meta)}
     />

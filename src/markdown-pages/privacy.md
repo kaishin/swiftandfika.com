@@ -23,4 +23,8 @@ We use the following 3rd party services in our properties, including the website
 
 ### Buttondown
 
-We use Buttondown to send email updates to subscribers. People who want to receive these updates have to opt-in by entering their email in a form on the website. It is possible to opt-out at any moment via a link provided directly in the email. Buttondown is complaint with GDPR and their privacy policy can be found [here](https://buttondown.email/privacy).
+We use Buttondown to send email updates to subscribers. People who want to receive these updates have to opt-in by entering their email in a form on the website. It is possible to opt-out at any moment via a link provided directly in the email. Buttondown is compliant with GDPR and their privacy policy can be found [here](https://buttondown.email/privacy).
+
+### Okay Analytics
+
+We use [Okay Analytics](https://www.okayanalytics.com) to collect basic, non-identifying data such as the referrer and the pages visited. People who would to like to opt-out of this can turn on the *do not track* feature of their browser. Okay Analytics is GDPR-compliant and their privacy policy can be found [here](https://www.okayanalytics.com/privacy/).
