@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
-import GLTFLoader from 'three-gltf-loader';
+import { THREEGLTFLoader, THREEDRACOLoader } from 'three-loaders';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 export default class ThreeDeeView extends Component {
@@ -48,10 +48,10 @@ export default class ThreeDeeView extends Component {
   };
 
   setupScene = () => {
-    this.loader = new GLTFLoader();
-
+    this.loader = new THREEGLTFLoader();
+    this.loader.setDRACOLoader(new THREEDRACOLoader('/draco/'));
     this.loader.load(
-      'mug-3.glb',
+      'mug.glb',
       (gltf) => {
         this.cup = gltf.scene;
         this.cup.rotation.z = 0.1;

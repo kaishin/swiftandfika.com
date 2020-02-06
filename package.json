@@ -37,18 +37,13 @@
     "react-helmet": "^5.2.1",
     "shallow-compare": "^1.2.2",
     "three": "^0.112.1",
-    "three-gltf-loader": "^1.111.0",
+    "three-loaders": "^1.0.9",
     "typeface-exo": "0.0.61"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
   },
-  "keywords": [
-    "swift",
-    "fika",
-    "swift & fika",
-    "stockholm"
-  ],
+  "keywords": ["swift", "fika", "swift & fika", "stockholm"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

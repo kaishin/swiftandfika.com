@@ -32,6 +32,7 @@ dependencies:
   shallow-compare: 1.2.2
   three: 0.112.1
   three-gltf-loader: 1.111.0_three@0.112.1
+  three-loaders: 1.0.9_three@0.112.1
   typeface-exo: 0.0.61
 devDependencies:
   prettier: 1.19.1
@@ -12853,6 +12854,14 @@ packages:
       three: '>=0.111.0'
     resolution:
       integrity: sha512-f2d6J5sMEC+dvRcpRjE8g9vqtvpNfnR7bgd+R7Y0dj2mmHwKN5luKe/WYA0Z9+j7mhjla/AC5DGxdXsu8wFhug==
+  /three-loaders/1.0.9_three@0.112.1:
+    dependencies:
+      three: 0.112.1
+    dev: false
+    peerDependencies:
+      three: ^0.99.0
+    resolution:
+      integrity: sha512-O5mINga3ouCfl3eCIPjFV5tUzjiA1VvtbMwPUr1rkHfSpeSL8fBxsaXJzABzCU/c3/kflscIB+eiGcEUAVPSRg==
   /three/0.112.1:
     dev: false
     resolution:
@@ -14131,4 +14140,5 @@ specifiers:
   shallow-compare: ^1.2.2
   three: ^0.112.1
   three-gltf-loader: ^1.111.0
+  three-loaders: ^1.0.9
   typeface-exo: 0.0.61
