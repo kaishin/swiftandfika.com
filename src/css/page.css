@@ -33,11 +33,6 @@
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  margin-top: -2rem;
-
-  @media (--full-grid-container) {
-    margin-top: 10rem;
-  }
 
   & .info-container {
     margin: 0 auto;

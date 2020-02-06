@@ -34,7 +34,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: finalTitle,
         },
         {
           property: `og:description`,
@@ -54,11 +54,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: `@kaishin`,
+        },
+        {
+          name: `twitter:site`,
+          content: `@swiftandfika`,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: finalTitle,
         },
         {
           name: `twitter:description`,
