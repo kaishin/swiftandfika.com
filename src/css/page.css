@@ -24,6 +24,7 @@
 
   @media (--full-grid-container) {
     display: flex;
+    min-height: 92vh;
   }
 }
 
@@ -53,7 +54,7 @@
 
   & .intro {
     line-height: 1.7;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.05em;
     max-width: 35rem;
     color: color-mod(var(--primary-color) tint(60%));
@@ -97,6 +98,12 @@
   & input[type="submit"] {
     width: 96%;
     margin: 1rem 0 0.5rem;
+  }
+
+  & form {
+    @media (--full-grid-container) {
+      margin-bottom: 0;
+    }
   }
 }
 
