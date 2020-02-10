@@ -42,6 +42,10 @@ class IndexPage extends React.Component {
                 and stay updated by following us on <a href="https://twitter.com/swiftandfika">Twitter</a> and
                 subscribing to our newsletter below.
               </p>
+              <p className="contribute">
+                PS: We're looking for people to help with organization and social events. Get in touch via Twitter DM or
+                email reda[at]swiftandfika.com!
+              </p>
               <div className="form-container">
                 <form
                   action="https://buttondown.email/api/emails/embed-subscribe/swiftandfika"

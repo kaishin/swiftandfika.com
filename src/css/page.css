@@ -19,6 +19,9 @@
 
 /* Teaser Page */
 .teaser-page-container {
+  max-width: 85rem;
+  margin: 0 auto;
+
   @media (--full-grid-container) {
     display: flex;
   }
@@ -42,6 +45,10 @@
       margin: 0;
       text-align: left;
     }
+
+    & h2 {
+      font-size: 2rem;
+    }
   }
 
   & .intro {
@@ -50,6 +57,19 @@
     letter-spacing: 0.05em;
     max-width: 35rem;
     color: color-mod(var(--primary-color) tint(60%));
+  }
+
+  & .contribute {
+    background: var(--dusk-blue);
+    border-radius: 0.5em;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    max-width: 35rem;
+    padding: 1rem;
+    opacity: 0.9;
   }
 }
 
