@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: kaishin/swiftandfika.com
+
+media_folder: static
+
+collections:
+  - name: speakers
+    label: Speakers
+    label_singular: Speaker
+    identifier_field: name
+    description: Confirmed speakers.
+    folder: data/speakers
+    media_folder: static/speakers
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: excerpt, label: Excerpt, widget: text }
+      - { name: date, label: Date, widget: datetime }
+      - { name: body, label: Body, widget: markdown }
+      - { name: draft, label: Draft, widget: boolean, default: false }
+      - { name: tags, label: Tags, widget: list }

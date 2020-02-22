@@ -5,6 +5,8 @@ module.exports = {
     siteUrl: 'https://swiftandfika.com',
   },
   plugins: [
+    'gatsby-plugin-netlify',
+    'gatsby-plugin-netlify-cms',
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
