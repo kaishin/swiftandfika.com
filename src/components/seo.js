@@ -28,50 +28,17 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={finalTitle}
       meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: finalTitle,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `og:image`,
-          content: `${site.siteMetadata.siteUrl}/previews/social-card-teaser.png`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: `@kaishin`,
-        },
-        {
-          name: `twitter:site`,
-          content: `@swiftandfika`,
-        },
-        {
-          name: `twitter:title`,
-          content: finalTitle,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: `twitter:image`,
-          content: `${site.siteMetadata.siteUrl}/previews/social-card-teaser.png`,
-        },
+        { name: `description`, content: metaDescription },
+        { property: `og:title`, content: finalTitle },
+        { property: `og:description`, content: metaDescription },
+        { property: `og:type`, content: `website` },
+        { name: `og:image`, content: `${site.siteMetadata.siteUrl}/previews/social-card-teaser.png` },
+        { name: `twitter:card`, content: `summary` },
+        { name: `twitter:creator`, content: `@kaishin` },
+        { name: `twitter:site`, content: `@swiftandfika` },
+        { name: `twitter:title`, content: finalTitle },
+        { name: `twitter:description`, content: metaDescription },
+        { name: `twitter:image`, content: `${site.siteMetadata.siteUrl}/previews/social-card-teaser.png` },
       ].concat(meta)}
     />
   );
