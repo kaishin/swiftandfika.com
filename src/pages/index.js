@@ -36,14 +36,13 @@ class IndexPage extends React.Component {
 
               <p className="intro">
                 In the meantime, check out the {' '}
-                <a href="https://www.youtube.com/playlist?list=PLKNt6c4Ajv2tgrX4wVgoHLSMuP-3sC2M9">
-                  videos of the 2018 edition
-                </a>{' '}
+                <a href="https://www.youtube.com/playlist?list=PLKNt6c4Ajv2tgrX4wVgoHLSMuP-3sC2M9">videos</a> of the{' '}
+                <a href="https://2018.swiftandfika.com">2018 edition</a>
                 and stay updated by following us on <a href="https://twitter.com/swiftandfika">Twitter</a> and
                 subscribing to our newsletter below.
               </p>
               <p className="contribute">
-                PS: We're looking for people to help with organization and social events. Get in touch via Twitter DM or
+                We're looking for people to help with organization and social events. Get in touch via Twitter DM or
                 email reda[at]swiftandfika.com!
               </p>
               <div className="form-container">
