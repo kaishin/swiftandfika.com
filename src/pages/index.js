@@ -18,20 +18,16 @@ class IndexPage extends React.Component {
             <ThreeDeeView />
             <div className="logo-container">
               <img src="/logo.svg" alt="logo" className="main-logo" />
-              <p className="date-subheading">Early Fall 2020, Stockholm.</p>
+              <p className="date-subheading">TBD, Stockholm.</p>
             </div>
           </section>
           <section className="info-box">
             <div className="info-container">
               <h2>We're Back!</h2>
               <p className="intro">
-                As the premier Swift conference in the nordics, Swift &amp; Fika is back this year with a busy schedule,
-                including the addition of a second day of talks and brand new social activities!
-              </p>
-
-              <p className="intro">
-                The first ticket sales are going live later this month.{' '}
-                <em>More details, including specific dates, will be shared soon.</em>
+                As the premier Swift conference in the nordics, Swift &amp; Fika is planned to return for its second
+                edition with a busier schedule, including the addition of a second day of talks and brand new social
+                activities!
               </p>
 
               <p className="intro">
@@ -42,8 +38,9 @@ class IndexPage extends React.Component {
                 subscribing to our newsletter below.
               </p>
               <p className="contribute">
-                We're looking for people to help with organization and social events. Get in touch via Twitter DM or
-                email reda[at]swiftandfika.com!
+                Due to the COVID-19 outbreak, we're postponing the conference until further notice. Swift &amp; Fika is
+                designed around the social experience and we've found no suitable way to reinvent it for these trying
+                times.
               </p>
               <div className="form-container">
                 <form
