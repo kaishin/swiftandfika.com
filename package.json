@@ -39,7 +39,7 @@
     "react-error-overlay": "^6.0.4",
     "react-helmet": "^5.2.1",
     "shallow-compare": "^1.2.2",
-    "three": "^0.125.0",
+    "three": "^0.137.0",
     "three-loaders": "^1.0.9",
     "typeface-exo": "0.0.61"
   },
